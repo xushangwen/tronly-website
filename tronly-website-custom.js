@@ -1,6 +1,7 @@
-document.getElementById('scrollToSectionHomeTest').addEventListener('click', function() {
-    var targetSection = document.getElementById('section_home_test');
-    if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
+$(document).ready(function() {
+    $('#scrollToSectionHomeTest').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#section_home_test').offset().top
+        }, 1000);
+    });
 });
